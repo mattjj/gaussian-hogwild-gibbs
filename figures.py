@@ -195,10 +195,10 @@ def fig1cd():
         plt.plot(ts,errs,label=(r'$\rho(B^{-1}C)^q=%0.3f$' % radius**q))
 
     plt.ylim(0,max(max(e) for e in allerrs))
-    plt.legend(loc='best',fontsize=18)
+    plt.legend(loc='best',fontsize=18).get_frame().set_facecolor('1.0')
     plt.xlabel(r'$t$',fontsize=18)
     plt.ylabel('block diagonal error')
-    plt.gcf().subplots_adjust(left=0.15)
+    plt.gcf().subplots_adjust(left=0.15,bottom=0.11)
 
     ### d
 
@@ -220,10 +220,10 @@ def fig1cd():
         plt.plot(ts,errs,label=(r'$\rho(B^{-1}C)^q=%0.3f$' % radius**q))
 
     plt.ylim(0,max(max(e) for e in allerrs))
-    plt.legend(loc='best',fontsize=18)
+    plt.legend(loc='best',fontsize=18).get_frame().set_facecolor('1.0')
     plt.xlabel(r'$t$',fontsize=18)
     plt.ylabel('off-block-diagonal error')
-    plt.gcf().subplots_adjust(left=0.15)
+    plt.gcf().subplots_adjust(left=0.15,bottom=0.11)
 
 ##########
 #  main  #
@@ -239,6 +239,9 @@ if __name__ == '__main__':
             sys.exit(1)
 
     fig1b()
+    plt.figure(1); plt.savefig('fig1b.pdf',transparent=True)
     fig1cd()
+    plt.figure(2); plt.savefig('fig1c.pdf',transparent=True)
+    plt.figure(3); plt.savefig('fig1d.pdf',transparent=True)
     plt.show()
 

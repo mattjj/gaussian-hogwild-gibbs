@@ -1,7 +1,11 @@
-NOTE: due to minor code changes, the exact plots in the paper submission are
-not produced with a seed of 0, but the plots have the same features regardless
-of the seed. (Try running things multiple times! With no explicit seed, numpy's
-generator is seeded from /dev/urandom.)
+The exact plots in the paper are reproduced with a seed of 0, i.e. by running
+
+```
+python figures.py --seed=0
+```
+
+Try running things multiple times; with no explicit seed, numpy's generator is
+seeded from /dev/urandom.
 
 # Dependencies #
 
